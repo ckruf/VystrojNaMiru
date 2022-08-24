@@ -14,7 +14,11 @@ const date = (document.getElementById(
   });
 
   
-const helmaSpan = document.getElementByC("helma");
+const equipmentHeading = document.getElementById("vystroj-nazev");
+const equipmentText1 = document.getElementById("vystroj-popis1");
+const equipmentText2 = document.getElementById("vystroj-popis2");
+
+const helmaSpan = document.getElementById("helma");
 const vyrazeckaSpan = document.getElementById("vyrazecka");
 const betonSpan = document.getElementById("beton");
 const rukaviceSpan = document.getElementById("rukavice");
@@ -41,5 +45,23 @@ const hokejkaText1 = "S naší hokejkou budete středem pozornosti na jakémkoli
 const hokejkaText2 = "Budete rozhrávat puk líp než Vasilevskij."
 
 function setEquipment(title, text1, text2) {
-  
+  equipmentHeading.innerHTML = title;
+  equipmentText1.innerHTML = text1;
+  equipmentText2.innerHTML = text2;
 }
+
+helmaSpan.addEventListener("click", () => {
+  setEquipment(helmaTitle, helmaText1, helmaText2)
+});
+vyrazeckaSpan.addEventListener("click", () => {
+  setEquipment(vyrazeckaTitle, vyrazeckaText1, vyrazeckaText2)
+});
+betonSpan.addEventListener("click", () => {
+  setEquipment(betonTitle, betonyText1, betonyText2)
+});
+rukaviceSpan.addEventListener("click", () => {
+  setEquipment(rukaviceTitle, rukaviceText1, rukaviceText2)
+});
+hokejkaSpan.addEventListener("click", () => {
+  setEquipment(hokejkaTitle, hokejkaText1, hokejkaText2)
+});

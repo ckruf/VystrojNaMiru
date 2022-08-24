@@ -414,8 +414,11 @@ About
 Vystroj
 ===============
 */
+
+
 #vystroj {
-  margin-top: 5rem;
+  min-height: 70vh;
+  margin-top: 3rem;
 }
 
 .vystroj-img,
@@ -435,7 +438,7 @@ figure span {
   border-radius: 50%;
   background: black;
   cursor: pointer;
-  animation: move 3s infinite;
+  animation: move 3s 10;
 }
 
 #helma {
@@ -479,26 +482,37 @@ figure span {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1170px) {
   .vystroj-center {
     display: flex;
     flex-wrap: wrap;
     /* by using space-between, in combination with a  */
     justify-content: space-between;
   }
-  .vystroj-img,
+  .vystroj-img {
+    /* shorthand for flex-grow:0, flex-shrink:0 and flex-basis (the size 
+    along the main axis, in this case width). In this case, we are setting flex-shrink
+    and flex-grow to 0, as we don't want the size of the children to change as our container
+    changes. And we are setting their width to 50% minus 2 rem, so that we can have
+    some distance between them. */
+    flex: 0 0 calc(65% - 2rem);
+    margin-bottom: 0;
+    /* align-self centers the children along the cross axis (vertically in this case) */
+    align-self: center;
+  }
   .vystroj-info {
     /* shorthand for flex-grow:0, flex-shrink:0 and flex-basis (the size 
     along the main axis, in this case width). In this case, we are setting flex-shrink
     and flex-grow to 0, as we don't want the size of the children to change as our container
     changes. And we are setting their width to 50% minus 2 rem, so that we can have
     some distance between them. */
-    flex: 0 0 calc(50% - 2rem);
+    flex: 0 0 calc(35% - 2rem);
     margin-bottom: 0;
     /* align-self centers the children along the cross axis (vertically in this case) */
     align-self: center;
   }
 }
+
 
 
 
