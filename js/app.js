@@ -35,3 +35,14 @@ scrollLinks.forEach(link => {
     });
   });
 });
+
+// make cards into links
+const kidsCard = document.getElementById("vystroj-deti");
+kidsCard.addEventListener("click", () => {
+  location.href = "/vystroj.html"
+});
+
+const adultsCard = document.getElementById("vystroj-dospeli");
+adultsCard.addEventListener("click", () => {
+  location.href ="vystroj.html";
+})

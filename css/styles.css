@@ -409,6 +409,100 @@ About
   }
 }
 
+/* 
+===============
+Vystroj
+===============
+*/
+#vystroj {
+  margin-top: 5rem;
+}
+
+.vystroj-img,
+.vystroj-info {
+  margin-bottom: 2rem;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+}
+
+figure span {
+  position: absolute;
+  width: 3.1%;
+  height: 6%;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  animation: move 3s infinite;
+}
+
+#helma {
+  left: 51%;
+  top: 1%;
+}
+
+#vyrazecka {
+  left: 33%;
+  top: 40%;
+}
+
+#beton {
+  left: 45%;
+  top: 75%;
+}
+
+#rukavice {
+  left: 64%;
+  top: 38%;
+}
+
+
+#hokejka {
+  left: 41%;
+  top: 93%;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0.9, 0.9);
+
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .vystroj-center {
+    display: flex;
+    flex-wrap: wrap;
+    /* by using space-between, in combination with a  */
+    justify-content: space-between;
+  }
+  .vystroj-img,
+  .vystroj-info {
+    /* shorthand for flex-grow:0, flex-shrink:0 and flex-basis (the size 
+    along the main axis, in this case width). In this case, we are setting flex-shrink
+    and flex-grow to 0, as we don't want the size of the children to change as our container
+    changes. And we are setting their width to 50% minus 2 rem, so that we can have
+    some distance between them. */
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    /* align-self centers the children along the cross axis (vertically in this case) */
+    align-self: center;
+  }
+}
+
+
+
+
 /*
 =============== 
 Services
@@ -487,6 +581,7 @@ Featured Tours
   box-shadow: var(--light-shadow);
   /* margin between the cards on small screens - single column layout */
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .tour-card:hover {
@@ -499,7 +594,7 @@ Featured Tours
 }
 
 .tour-img {
-  height: 15rem;
+  height: 25rem;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -561,12 +656,6 @@ Featured Tours
 
   .tour-card {
     flex: 0 0 calc(50% - 2rem);
-  }
-}
-
-@media screen and (min-width: 1170px) {
-  .tour-card {
-    flex: 0 0 calc(33.33% - 2rem);
   }
 }
 
