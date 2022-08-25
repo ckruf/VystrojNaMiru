@@ -40,17 +40,17 @@ scrollLinks.forEach(link => {
 // make cards into links
 const kidsCard = document.getElementById("vystroj-deti");
 kidsCard.addEventListener("click", () => {
-  location.href = "/vystroj.html"
+  location.href = "/VystrojNaMiru/vystroj.html"
 });
 
 const adultsCard = document.getElementById("vystroj-dospeli");
 adultsCard.addEventListener("click", () => {
-  location.href ="vystroj.html";
+  location.href ="/VystrojNaMiru/vystroj.html";
 })
 
 // make logo into link
 
 const mojelogo = document.getElementById("mojelogo");
 mojelogo.addEventListener("click", () => {
-  location.href="/index.html"
+  location.href="/VystrojNaMiru/index.html"
 });

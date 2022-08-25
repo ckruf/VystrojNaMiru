@@ -68,5 +68,5 @@ hokejkaSpan.addEventListener("click", () => {
 
 const mojelogo = document.getElementById("mojelogo");
 mojelogo.addEventListener("click", () => {
-  location.href="/index.html"
+  location.href="/VystrojNaMiru/index.html"
 });
