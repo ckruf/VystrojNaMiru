@@ -36,6 +36,7 @@ scrollLinks.forEach(link => {
   });
 });
 
+
 // make cards into links
 const kidsCard = document.getElementById("vystroj-deti");
 kidsCard.addEventListener("click", () => {
@@ -46,3 +47,10 @@ const adultsCard = document.getElementById("vystroj-dospeli");
 adultsCard.addEventListener("click", () => {
   location.href ="vystroj.html";
 })
+
+// make logo into link
+
+const mojelogo = document.getElementById("mojelogo");
+mojelogo.addEventListener("click", () => {
+  location.href="/index.html"
+});

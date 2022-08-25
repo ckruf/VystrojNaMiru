@@ -80,7 +80,6 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -189,6 +188,10 @@ Navbar
   z-index: 2;
 }
 
+.nav-logo {
+  cursor: pointer;
+}
+
 .nav-icons {
   display: none;
 }
@@ -273,7 +276,7 @@ Navbar
 
   .nav-link {
     padding: 0 0;
-    margin-right: 0.7rem;
+    margin-right: 2rem;
   }
 
   .nav-link:hover {
@@ -304,7 +307,8 @@ Hero
 */
 .hero {
   min-height: 100vh;
-  background: var(--clr-primary-5);
+  background: linear-gradient(rgb(255, 102, 102, 0.5), rgba(0, 0, 0, 0.7)),
+      url("../images/main.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,10 +346,6 @@ Hero
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
-    background: linear-gradient(rgb(255, 102, 102, 0.5), rgba(0, 0, 0, 0.7)),
-      url("../images/main.jpg") center/cover no-repeat;
-  }
   .hero-banner {
     padding: 0;
   }
@@ -439,6 +439,7 @@ figure span {
   background: black;
   cursor: pointer;
   animation: move 3s 10;
+  box-shadow: 0px 0px 10px var(--clr-primary-5);
 }
 
 #helma {
@@ -469,16 +470,17 @@ figure span {
 
 @keyframes move {
   0% {
-    transform: scale(0.9, 0.9);
+    box-shadow: 0px 0px 8px var(--clr-primary-10);
 
   }
 
   50% {
-    transform: scale(1.2, 1.2);
+    box-shadow: 0px 0px 24px var(--clr-primary-5);
+    transform: scale(1.05, 1.05);
   }
 
   100% {
-    transform: scale(0.9, 0.9);
+    box-shadow: 0px 0px 8px var(--clr-primary-10);
   }
 }
 
@@ -580,6 +582,7 @@ Services
   }
   .service-title {
     margin-bottom: 0.5rem;
+    text-transform: none;
   }
 }
 
@@ -675,148 +678,63 @@ Featured Tours
 
 /*
 =============== 
-Contact
+Kontakt
 ===============
 */
-
-.contact {
-  background: var(--clr-primary-5);
+#kontakt {
+  margin-top: 3rem;
+  /* min-height: 70vh; */
+}
+.kontakt-intro, .kontakt-info {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 25rem;
 }
 
-.contact-title {
-  color: var(--clr-white);
+.kontakt-fyzicky {
+  margin-top: 2rem;
 }
 
-.contact-title p {
-  color: var(--clr-primary-8);
+.kontakt-info ul li span {
+  color: var(--clr-primary-5)
 }
 
-.contact-form {
-  display: flex;
-  max-width: 28rem;
+.fyzicky-text p {
+  text-align: center;
 }
 
-.form-control {
-  flex: 1 1 auto;
-  color: var(--clr-grey-5);
-}
 
-.form-control,
-.btn-submit {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 300;
-  letter-spacing: var(--spacing);
-  background: var(--clr-white);
-  text-transform: capitalize;
-  border: transparent;
-}
-
-.form-control::-webkit-input-placeholder {
-  color: inherit;
-}
-
-.form-control::-moz-placeholder {
-  color: inherit;
-}
-
-.form-control:-ms-input-placeholder {
-  color: inherit;
-}
-
-.form-control::-ms-input-placeholder {
-  color: inherit;
-}
-
-.form-control::placeholder {
-  color: inherit;
-}
-
-.btn-submit {
-  font-family: var(--ff-primary);
-  margin-left: 0.5rem;
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-1);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn-submit:hover {
-  background: var(--clr-primary-1);
-  color: var(--clr-primary-5);
+@media screen and (min-width: 768px) {
+  .kontakt-intro, .kontakt-info {
+    width: 40rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .contact-center {
+  .kontakt-fyzicky {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .contact-form {
-    /* The default is stretch, so this prevents the contact form from stretching vertically */
-    align-self: flex-start;
-    /* This  will make our form grow and shrink as necessary (horizontally)*/
-    flex: 1 1 auto;
-    max-width: 100%;
-    padding-left: 2rem;
+
+  .fyzicky-text, .fyzicky-img {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+  
+}
+
+@media screen and (min-height: 1100px) {
+  #kontakt {
+    /* height: 80vw; */
   }
 }
 
-/*
-=============== 
-Gallery
-===============
-*/
 
-.gallery-img-container {
-  position: relative;
-  background: var(--clr-primary-5);
-}
 
-.gallery-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 2rem;
-  transform: translate(-50%, -50%);
-  color: var(--clr-white);
-  opacity: 0;
-  cursor: pointer;
-  transition: var(--transition);
-}
 
-.gallery-img {
-  height: 17rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.gallery-img-container:hover .gallery-img {
-  opacity: 0.5;
-}
-
-.gallery-img-container:hover .gallery-icon {
-  opacity: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .gallery-center {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .gallery-img-container {
-    flex: 0 0 50%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .gallery-img-container {
-    flex: 0 0 25%;
-  }
-}
 /*
 =============== 
 Footer

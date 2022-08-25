@@ -65,3 +65,8 @@ rukaviceSpan.addEventListener("click", () => {
 hokejkaSpan.addEventListener("click", () => {
   setEquipment(hokejkaTitle, hokejkaText1, hokejkaText2)
 });
+
+const mojelogo = document.getElementById("mojelogo");
+mojelogo.addEventListener("click", () => {
+  location.href="/index.html"
+});
