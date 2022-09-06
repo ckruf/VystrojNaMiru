@@ -190,6 +190,7 @@ Navbar
 
 .nav-logo {
   cursor: pointer;
+  max-width: 10rem;
 }
 
 .nav-icons {
