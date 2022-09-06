@@ -309,7 +309,7 @@ Hero
 */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgb(255, 102, 102, 0.5), rgba(0, 0, 115, 0.7)),
+  background: linear-gradient(rgba(255, 102, 102, 0.5), rgba(0, 0, 85, 0.7)),
       url("../images/main.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
