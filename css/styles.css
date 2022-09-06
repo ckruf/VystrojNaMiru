@@ -26,7 +26,8 @@ Variables
   --clr-primary-9: hsl(0, 100%, 62%);
   --clr-primary-10: hsl(0, 100%, 66%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-blue: rgb(0, 0, 115);
+  --clr-blue-2: rgb(0, 0, 83);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
@@ -59,7 +60,7 @@ Global Styles
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
-  color: var(--clr-grey-1);
+  color: var(--clr-blue);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -229,7 +230,7 @@ Navbar
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   transition: var(--transition);
-  color: var(--clr-grey-1);
+  color: var(--clr-blue);
   cursor: pointer;
   font-size: 1rem;
 }
@@ -308,7 +309,7 @@ Hero
 */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgb(255, 102, 102, 0.5), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgb(255, 102, 102, 0.5), rgba(0, 0, 115, 0.7)),
       url("../images/main.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -440,7 +441,7 @@ figure span {
   background: black;
   cursor: pointer;
   animation: move 3s 10;
-  box-shadow: 0px 0px 10px var(--clr-primary-5);
+  box-shadow: 0px 0px 10px var(--clr-blue);
 }
 
 #helma {
@@ -471,17 +472,17 @@ figure span {
 
 @keyframes move {
   0% {
-    box-shadow: 0px 0px 8px var(--clr-primary-10);
+    box-shadow: 0px 0px 8px var(--clr-blue);
 
   }
 
   50% {
-    box-shadow: 0px 0px 24px var(--clr-primary-5);
+    box-shadow: 0px 0px 24px var(--clr-blue-2);
     transform: scale(1.05, 1.05);
   }
 
   100% {
-    box-shadow: 0px 0px 8px var(--clr-primary-10);
+    box-shadow: 0px 0px 8px var(--clr-blue);
   }
 }
 
@@ -544,6 +545,10 @@ Services
   margin-bottom: 1.5rem;
 }
 
+.service-title {
+  color: var(--clr-blue-2);
+}
+
 .service-text {
   max-width: 20rem;
   margin-left: auto;
@@ -589,7 +594,7 @@ Services
 
 /*
 =============== 
-Featured Tours
+Vystroje cards
 ===============
 */
 
@@ -634,10 +639,10 @@ Featured Tours
   flex-wrap: wrap;
 }
 
-.tour-title p,
 .tour-title h4 {
   margin-bottom: 0.75rem;
   line-height: 1.25;
+  color: var(--clr-blue-2);
 }
 
 .tour-title p {
@@ -737,7 +742,7 @@ Footer
 */
 
 .footer {
-  background: var(--clr-grey-1);
+  background: var(--clr-blue-2);
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
