@@ -187,11 +187,12 @@ Navbar
   background: var(--clr-white);
   box-shadow: var(--dark-shadow);
   z-index: 2;
+  /* height: 5rem; */
 }
 
 .nav-logo {
   cursor: pointer;
-  max-width: 10rem;
+  height: 100%;
 }
 
 .nav-icons {
@@ -208,7 +209,8 @@ Navbar
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0 2rem 0 0;
+  height: 5rem;
 }
 
 .nav-toggle {
@@ -252,9 +254,6 @@ Navbar
 }
 
 @media screen and (min-width: 992px) {
-  .navbar {
-    padding: 1rem 2rem;
-  }
   /* hide toggle button */
   .nav-toggle {
     display: none;
